@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 mongoose
     .connect(
-        process.env.MONGO_URI
+        process.env.MONGODB_URI
     ).then(() => {
         console.log("Connected to database!");
     })
