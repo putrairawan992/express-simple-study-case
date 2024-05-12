@@ -1,13 +1,13 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
 const app = express();
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const { v4: uuidv4 } = require('uuid'); // Import uuidv4
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
+import { v4 as uuidv4 } from 'uuid'; // Import uuidv4
 require("dotenv").config();
-const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
 
-const users = require('../models/users')
+import users from '../models/users';
 
 app.use(cors());
 app.use(bodyParser.json());
