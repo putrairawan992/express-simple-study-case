@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid'); // Import uuidv4
 require("dotenv").config();
 const bodyParser = require('body-parser');
 
-const users = require('./models/users')
+const users = require('../models/users')
 
 app.use(cors());
 app.use(bodyParser.json());

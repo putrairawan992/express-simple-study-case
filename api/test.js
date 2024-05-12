@@ -2,7 +2,7 @@ async function runTests() {
     const chai = require('chai');
     const chaiHttp = await require('chai-http');
     const app = require('./index.js');
-    const users = require('./models/users'); 
+    const users = require('../models/users.js'); 
 
     chai.use(chaiHttp);
     const expect = chai.expect;
