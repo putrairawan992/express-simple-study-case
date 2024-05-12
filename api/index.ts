@@ -116,8 +116,8 @@ app.get('/getusers', async (req, res) => {
     const { email } = req.params;
   
     try {
-      await users.findOneAndDelete({ email: email }); // Assuming your collection is named 'users'
-      res.sendStatus(204); // No Content
+      const user = await users.findOneAndDelete({ email: email }); // Assuming your collection is named 'users'
+      res.json(user); // No Content
     } catch (error) {
       console.error('Error deleting user:', error);
       res.status(500).json({ error: 'Failed to delete user' });
